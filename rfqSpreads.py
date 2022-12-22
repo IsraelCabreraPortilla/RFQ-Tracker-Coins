@@ -33,8 +33,8 @@ datos_generales = []
 df_resumen_general = ""
 def run():
     i = 0
-    while i < 200:
-        if i == 50 or i==50 or i==100 or i ==150:
+    while i < 170:
+        if i == 30 or i == 50 or i==80 or i==120 or i ==150:
             envio_msj_still_here()
         for k in current_prices:
             cant = get_rfq_price(k,current_prices[k])
