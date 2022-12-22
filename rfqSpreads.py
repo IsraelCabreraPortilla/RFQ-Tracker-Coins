@@ -15,10 +15,10 @@ def envio_msjIMG(symbol, time1, time2):
                         data={'chat_id': '-614042061', 'parse_mode':'markdown','caption': '*{}* Analysis from {} to {} '.format(symbol,time1,time2)})
 def envio_msj_still_here():
     r = requests.post('https://api.telegram.org/bot5363622455:AAEoFyCSHrhOZhQzxSGD6MxOWKw9h9aoQqY/sendMessage',
-                data= {'chat_id': "-614042061",'text': "Still pulling up data..."})
+                data= {'chat_id': "-819161372",'text': "Still pulling up data..."})
 def envio_msj_spreads_send():
  r = requests.post('https://api.telegram.org/bot5363622455:AAEoFyCSHrhOZhQzxSGD6MxOWKw9h9aoQqY/sendMessage',
-                data= {'chat_id': "-614042061",'text': "Data successfully send to --> Spreads Exchange and RFQ..."})
+                data= {'chat_id': "-819161372",'text': "Data successfully send to --> ALL COINS - Spreads RFQ/EXCH"})
  return r.json()
  
 time1_ = str(datetime.now().strftime("%H:%M:%S"))
@@ -33,7 +33,7 @@ datos_generales = []
 df_resumen_general = ""
 def run():
     i = 0
-    while i < 10:
+    while i < 200:
         if i == 50 or i==50 or i==100 or i ==150:
             envio_msj_still_here()
         for k in current_prices:
