@@ -15,7 +15,7 @@ def envio_msjIMG(symbol, time1, time2):
                         data={'chat_id': '-614042061', 'parse_mode':'markdown','caption': '*{}* Analysis from {} to {} '.format(symbol,time1,time2)})
 def envio_msj_still_here():
     r = requests.post('https://api.telegram.org/bot5363622455:AAEoFyCSHrhOZhQzxSGD6MxOWKw9h9aoQqY/sendMessage',
-                data= {'chat_id': "-819161372",'text': "Still pulling up data..."})
+                data= {'chat_id': "-819161372",'text': "All Coins - Still pulling up data..."})
 def envio_msj_spreads_send():
  r = requests.post('https://api.telegram.org/bot5363622455:AAEoFyCSHrhOZhQzxSGD6MxOWKw9h9aoQqY/sendMessage',
                 data= {'chat_id': "-819161372",'text': "Data successfully send to --> ALL COINS - Spreads RFQ/EXCH"})
