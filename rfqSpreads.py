@@ -76,4 +76,9 @@ def run():
         )
     envio_msjIMG('Spreads RFQ', time1_, time2_)
     envio_msj_spreads_send()
+    df_resumen_general = ""
+    datos_generales = []
+    dictionary_spreads = {'BTC':[],'ETH':[],'USDT':[],'BCH':[],'LTC':[], 'AAVE': [], 'BAND': [], 'BAT': [], 'COMP': [], 'DAI': [], 'ENJ': [], 'FTM': [], 'GRT': [], 'LINK': [], 'LTC': [], 'MANA': [], 'MATIC': [], 'OGN': [],'SNX': [], 'SUSHI': [], 'UNI': [], 'YFI': []}
+    dictionary_spreads_mean = {'BTC':0,'ETH':0,'USDT':0,'BCH':0,'LTC':0, 'AAVE': 0, 'BAND': 0, 'BAT': 0, 'COMP': 0, 'DAI': 0, 'ENJ': 0, 'FTM': 0, 'GRT': 0, 'LINK': 0, 'LTC': 0, 'MANA': 0, 'MATIC': 0, 'OGN': 0,'SNX': 0, 'SUSHI': 0, 'UNI': 0, 'YFI': 0}
+
     
