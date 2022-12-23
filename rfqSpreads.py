@@ -21,17 +21,19 @@ def envio_msj_spreads_send():
                 data= {'chat_id': "-819161372",'text': "Data successfully send to --> ALL COINS - Spreads RFQ/EXCH"})
  return r.json()
  
-time1_ = str(datetime.now().strftime("%H:%M:%S"))
-#Prices extracted from WebScrapping
-global current_prices, usd_worth
-c = webScrapping.calcula_usd()
-current_prices = c[0]
-usd_worth = c[1]
-dictionary_spreads = {'BTC':[],'ETH':[],'USDT':[],'BCH':[],'LTC':[], 'AAVE': [], 'BAND': [], 'BAT': [], 'COMP': [], 'DAI': [], 'ENJ': [], 'FTM': [], 'GRT': [], 'LINK': [], 'LTC': [], 'MANA': [], 'MATIC': [], 'OGN': [],'SNX': [], 'SUSHI': [], 'UNI': [], 'YFI': []}
-dictionary_spreads_mean = {'BTC':0,'ETH':0,'USDT':0,'BCH':0,'LTC':0, 'AAVE': 0, 'BAND': 0, 'BAT': 0, 'COMP': 0, 'DAI': 0, 'ENJ': 0, 'FTM': 0, 'GRT': 0, 'LINK': 0, 'LTC': 0, 'MANA': 0, 'MATIC': 0, 'OGN': 0,'SNX': 0, 'SUSHI': 0, 'UNI': 0, 'YFI': 0}
-datos_generales = []
-df_resumen_general = ""
+
 def run():
+    
+    time1_ = str(datetime.now().strftime("%H:%M:%S"))
+    #Prices extracted from WebScrapping
+    c = webScrapping.calcula_usd()
+    current_prices = c[0]
+    usd_worth = c[1]
+    dictionary_spreads = {'BTC':[],'ETH':[],'USDT':[],'BCH':[],'LTC':[], 'AAVE': [], 'BAND': [], 'BAT': [], 'COMP': [], 'DAI': [], 'ENJ': [], 'FTM': [], 'GRT': [], 'LINK': [], 'LTC': [], 'MANA': [], 'MATIC': [], 'OGN': [],'SNX': [], 'SUSHI': [], 'UNI': [], 'YFI': []}
+    dictionary_spreads_mean = {'BTC':0,'ETH':0,'USDT':0,'BCH':0,'LTC':0, 'AAVE': 0, 'BAND': 0, 'BAT': 0, 'COMP': 0, 'DAI': 0, 'ENJ': 0, 'FTM': 0, 'GRT': 0, 'LINK': 0, 'LTC': 0, 'MANA': 0, 'MATIC': 0, 'OGN': 0,'SNX': 0, 'SUSHI': 0, 'UNI': 0, 'YFI': 0}
+    datos_generales = []
+    df_resumen_general = ""
+    
     i = 0
     while i < 170:
         if i == 30 or i == 50 or i==80 or i==120 or i ==150:
@@ -51,7 +53,7 @@ def run():
        
     
     for k in dictionary_spreads_mean:
-        time.sleep(5)
+        time.sleep(10)
         if dictionary_spreads_mean[k] !=0:
             mean = dictionary_spreads_mean[k]
             size = str(current_prices[k])
